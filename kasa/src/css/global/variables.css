@@ -1,0 +1,19 @@
+/* Colors variables */
+
+:root {
+    --primary: #FF6060;
+    --white: #FFFFFF;
+    --white-o: rgba(255, 255, 255, 0.5);
+    --black: #000000;
+
+    /* Lightmode palette */
+    --gray-300: #F6F6F6;
+    --gray-400: #E3E3E3;
+    --gray-500: #C4C4C4;
+
+    /* Dark mode palette */
+    --gray-600: #5C5C5C;
+    --gray-700: #474747;
+    --gray-800: #1E1E1E;
+    --gray-900: #121212;
+}

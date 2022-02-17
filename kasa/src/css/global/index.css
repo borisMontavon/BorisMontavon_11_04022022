@@ -1,0 +1,14 @@
+@import "./variables.css";
+@import "./font.css";
+
+/* Global rules */
+
+::selection {
+    background-color: var(--primary);
+    color: var(--white);
+    text-shadow: none;
+}
+
+html {
+    font-family: "Montserrat", sans-serif;
+}
