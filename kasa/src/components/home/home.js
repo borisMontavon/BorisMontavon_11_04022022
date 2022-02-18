@@ -1,6 +1,6 @@
 import Navbar from "../navbar";
 import Banner from "../banner";
-import bannerImage from "../../assets/images/test.jpg";
+import bannerImage from "../../assets/images/scotland.webp";
 
 function Home() {
     return (
@@ -9,7 +9,7 @@ function Home() {
             <Banner
                 src={bannerImage}
                 alt="Test"
-                heightClass="h-28 md:h-56"
+                heightClass="h-28 lg:h-56"
                 title="Chez vous, partout et ailleurs"
             />
         </>
