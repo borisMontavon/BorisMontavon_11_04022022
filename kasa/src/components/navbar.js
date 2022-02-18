@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import logo from "../assets/logo/LOGO.svg";
 
 function Navbar() {
@@ -12,8 +12,8 @@ function Navbar() {
                 />
                 <div>
                     <div className="uppercase font-medium text-primary text-base md:text-xl">
-                        <Link to="/" className="pr-5 md:pr-10 lg:pr-16 underline">Accueil</Link>
-                        <Link to="/about">À Propos</Link>
+                        <NavLink to="/" className={({isActive}) => "pr-5 md:pr-10 lg:pr-16" + (!isActive ? "" : " underline")}>Accueil</NavLink>
+                        <NavLink to="/about" className={({isActive}) => !isActive ? "" : "underline"}>À Propos</NavLink>
                     </div>
                 </div>
             </div>

@@ -1,6 +1,6 @@
 import Navbar from "../navbar";
 import Banner from "../banner";
-import bannerImage from "../../assets/images/test.jpg";
+import bannerImage from "../../assets/images/scotland.webp";
 
 function Home() {
     return (
