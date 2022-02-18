@@ -6,8 +6,8 @@ import Resources from "../../assets/resources.json";
 
 function About() {
     const { dropdowns } = Resources;
-    const dropdownItems = dropdowns.map((item) => 
-        <Dropdown title={item.title} text={item.text} />
+    const dropdownItems = dropdowns.map((item, index) => 
+        <Dropdown title={item.title} text={item.text} key={index} />
     );
 
     return (

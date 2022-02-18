@@ -1,10 +1,15 @@
-#logo {
+#navbar-logo {
     width: 145px;
     height: auto;
 }
 
-@media screen and (min-width: 768px) {
-    #logo {
+@media screen and (min-width: 1024px) {
+    #navbar-logo {
         width: 210px;
     }
+}
+
+#footer-logo {
+    width: 120px;
+    height: auto;
 }
