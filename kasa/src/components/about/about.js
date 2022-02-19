@@ -1,4 +1,3 @@
-import Navbar from "../navbar";
 import Banner from "../banner";
 import Dropdown from "../dropdown";
 import bannerImage from "../../assets/images/ireland.webp";
@@ -12,7 +11,6 @@ function About() {
 
     return (
         <>
-            <Navbar />
             <Banner
                 src={bannerImage}
                 alt="Test"
