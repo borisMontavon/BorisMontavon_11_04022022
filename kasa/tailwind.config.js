@@ -26,7 +26,7 @@ module.exports = {
 
       primary: {
         DEFAULT: "var(--primary)",
-        // hover: "var(--primary-hover)"
+        opac: "var(--primary-o)"
       },
 
       // Light mode

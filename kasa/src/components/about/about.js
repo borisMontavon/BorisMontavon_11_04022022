@@ -1,5 +1,5 @@
-import Banner from "../banner";
-import Dropdown from "../dropdown";
+import Banner from "../shared/banner";
+import Dropdown from "../shared/dropdown";
 import bannerImage from "../../assets/images/ireland.webp";
 import Resources from "../../assets/resources.json";
 
