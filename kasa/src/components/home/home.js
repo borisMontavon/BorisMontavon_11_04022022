@@ -1,16 +1,16 @@
-import Navbar from "../navbar";
 import Banner from "../banner";
 import bannerImage from "../../assets/images/scotland.webp";
+import Resources from "../../assets/resources.json";
 
 function Home() {
+    const { homeBanner } = Resources;
     return (
         <>
-            <Navbar />
             <Banner
                 src={bannerImage}
                 alt="Test"
                 heightClass="h-28 lg:h-56"
-                title="Chez vous, partout et ailleurs"
+                title={homeBanner.title}
             />
         </>
     );

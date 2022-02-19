@@ -1,6 +1,9 @@
 import logo from "../assets/logo/LOGO-white.svg";
+import Resources from "../assets/resources.json";
 
 function Footer() {
+    const { footer } = Resources;
+
     return (
         <footer className="w-full h-52 absolute bottom-0 bg-black flex flex-col justify-center items-center">
             <img
@@ -8,7 +11,9 @@ function Footer() {
                 alt="Logo Kasa"
                 id="footer-logo"
             />
-            <p className="text-white font-medium text-sm lg:text-xl mt-8">© 2020 Kasa. All rights reserved</p>
+            <p className="text-white font-medium text-sm lg:text-xl mt-8">
+                {footer.title}
+            </p>
         </footer>
     );
 }

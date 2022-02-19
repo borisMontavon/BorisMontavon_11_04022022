@@ -1,6 +1,6 @@
 .banner-title {
     top: 50%;
-    transform: translateY(0, -50%, 0);
+    transform: translate3d(0, -50%, 0);
     padding-left: 1rem;
     width: 60%;
 }
