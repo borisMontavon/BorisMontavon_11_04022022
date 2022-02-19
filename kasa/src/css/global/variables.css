@@ -2,6 +2,7 @@
 
 :root {
     --primary: #FF6060;
+    --primary-o: rgba(255, 96, 96, 0.75);
     --white: #FFFFFF;
     --white-o: rgba(255, 255, 255, 0.5);
     --black: #000000;

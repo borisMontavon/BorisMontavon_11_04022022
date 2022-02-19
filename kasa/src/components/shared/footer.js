@@ -1,5 +1,5 @@
-import logo from "../assets/logo/LOGO-white.svg";
-import Resources from "../assets/resources.json";
+import logo from "../../assets/logo/LOGO-white.svg";
+import Resources from "../../assets/resources.json";
 
 function Footer() {
     const { footer } = Resources;

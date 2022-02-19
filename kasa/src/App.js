@@ -3,8 +3,8 @@ import "./css/compiled/compiled.css";
 import Home from "./components/home/home";
 import About from "./components/about/about";
 import ErrorPage from "./components/errorPage/errorPage";
-import Navbar from "./components/navbar";
-import Footer from "./components/footer";
+import Navbar from "./components/shared/navbar";
+import Footer from "./components/shared/footer";
 
 function App() {
   return (
