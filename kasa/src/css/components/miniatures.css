@@ -1,5 +1,9 @@
 /* Miniature style */
 
-.miniature:hover .miniature-title {
-    background-color: var(--primary) !important;
+.miniature {
+    &:hover {
+        .miniature-title {
+            background-color: var(--primary) !important;
+        }
+    }
 }

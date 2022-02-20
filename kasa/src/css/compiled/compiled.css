@@ -285,6 +285,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   bottom: 0px;
 }.left-0{
   left: 0px;
+}.top-6{
+  top: 1.5rem;
+}.right-6{
+  right: 1.5rem;
 }.-top-4{
   top: -1rem;
 }.z-20{
@@ -294,6 +298,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }.mx-6{
   margin-left: 1.5rem;
   margin-right: 1.5rem;
+}.mx-2{
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }.mt-20{
   margin-top: 5rem;
 }.mt-32{
@@ -312,6 +319,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 2rem;
 }.block{
   display: block;
+}.inline-block{
+  display: inline-block;
 }.flex{
   display: flex;
 }.hidden{
@@ -324,6 +333,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 7rem;
 }.h-64{
   height: 16rem;
+}.h-0{
+  height: 0px;
 }.h-8{
   height: 2rem;
 }.h-52{
@@ -332,6 +343,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   min-height: 100vh;
 }.w-full{
   width: 100%;
+}.w-0{
+  width: 0px;
+}.cursor-pointer{
+  cursor: pointer;
 }.flex-col{
   flex-direction: column;
 }.items-center{
@@ -347,6 +362,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-bottom-left-radius: 0.375rem;
 }.bg-primary-opac{
   background-color: var(--primary-o);
+}.bg-gray500{
+  background-color: var(--gray-500);
 }.bg-primary{
   background-color: var(--primary);
 }.bg-gray300{
@@ -403,6 +420,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: var(--white);
 }.underline{
   text-decoration-line: underline;
+}.opacity-0{
+  opacity: 0;
 }.transition-all{
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -410,11 +429,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 }/* Logo style */#navbar-logo {
     width: 145px;
     height: auto;
-}@media screen and (min-width: 1024px) {
-    #navbar-logo {
-        width: 210px;
-    }
-}#footer-logo {
+}@media screen and (min-width: 1024px) {#navbar-logo {
+        width: 210px
+}
+    }#footer-logo {
     width: 120px;
     height: auto;
 }/* Banner style */.banner-title {
@@ -422,16 +440,40 @@ Ensure the default browser behavior of the `hidden` attribute.
     transform: translate3d(0, -50%, 0);
     padding-left: 1rem;
     width: 60%;
-}@media screen and (min-width: 1024px) {
-    .banner-title {
+}@media screen and (min-width: 1024px) {.banner-title {
         left: 50%;
-        transform: translate3d(-50%, -50%, 0);
-    }
-}/* Dropdown style */.dropdown-icon-rotation {
+        transform: translate3d(-50%, -50%, 0)
+}
+    }/* Dropdown style */.dropdown-icon-rotation {
     transform: rotate(180deg);
 }/* Miniature style */.miniature:hover .miniature-title {
-    background-color: var(--primary) !important;
-}/* Colors variables */:root {
+            background-color: var(--primary) !important;
+        }/* The switch - the box around the slider */.switch {
+    width: 32px;
+    height: 16px;
+}/* The slider */.slider {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}.slider::before {
+        position: absolute;
+        content: "";
+        height: 12px;
+        width: 12px;
+        left: 2px;
+        bottom: 2px;
+        background-color: white;
+        transition: .4s;
+    }/* Rounded slider */.slider.round {
+        border-radius: 34px;
+    }.slider.round::before {
+            border-radius: 50%;
+        }input:checked + .slider {
+            background-color: var(--primary);
+        }input:checked + .slider::before {
+                transform: translateX(16px);
+            }/* Colors variables */:root {
     --primary: #FF6060;
     --primary-o: rgba(255, 96, 96, 0.75);
     --white: #FFFFFF;
@@ -454,6 +496,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     text-shadow: none;
 }html {
     font-family: "Montserrat", sans-serif;
+}.dark .dark\:bg-gray900{
+  background-color: var(--gray-900);
+}.dark .dark\:bg-gray800{
+  background-color: var(--gray-800);
 }@media (min-width: 1024px){.lg\:mx-24{
     margin-left: 6rem;
     margin-right: 6rem;
@@ -518,5 +564,13 @@ Ensure the default browser behavior of the `hidden` attribute.
     font-size: 3rem;
   }.lg\:text-xl{
     font-size: 1.5rem;
+  }.lg\:transition-all{
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }.lg\:hover\:text-primary-opac:hover{
+    color: var(--primary-o);
+  }.dark .dark\:lg\:bg-gray800{
+    background-color: var(--gray-800);
   }
 }
