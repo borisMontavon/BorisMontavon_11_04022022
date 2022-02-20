@@ -3,10 +3,8 @@
 #navbar-logo {
     width: 145px;
     height: auto;
-}
 
-@media screen and (min-width: 1024px) {
-    #navbar-logo {
+    @media screen and (min-width: 1024px) {
         width: 210px;
     }
 }

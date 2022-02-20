@@ -5,11 +5,11 @@
     transform: translate3d(0, -50%, 0);
     padding-left: 1rem;
     width: 60%;
-}
 
-@media screen and (min-width: 1024px) {
-    .banner-title {
+    @media screen and (min-width: 1024px) {
         left: 50%;
         transform: translate3d(-50%, -50%, 0);
     }
 }
+
+

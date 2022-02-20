@@ -8,7 +8,7 @@ function AdsContainer() {
     );
 
     return (
-        <div className="mx-6 h-auto lg:mx-24 lg:bg-gray300 lg:rounded-3xl lg:p-10 lg:grid lg:grid-cols-3 lg:gap-10">
+        <div className="mx-6 h-auto lg:mx-24 lg:bg-gray300 dark:lg:bg-gray800 lg:rounded-3xl lg:p-10 lg:grid lg:grid-cols-3 lg:gap-10">
             {miniaturesItems}
         </div>
     );

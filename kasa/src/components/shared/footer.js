@@ -1,5 +1,6 @@
 import logo from "../../assets/logo/LOGO-white.svg";
 import Resources from "../../assets/resources.json";
+import ThemeSwitch from "./darkModeSwitch";
 
 function Footer() {
     const { footer } = Resources;
@@ -14,6 +15,7 @@ function Footer() {
             <p className="text-white font-medium text-sm lg:text-xl mt-8">
                 {footer.title}
             </p>
+            <ThemeSwitch />
         </footer>
     );
 }

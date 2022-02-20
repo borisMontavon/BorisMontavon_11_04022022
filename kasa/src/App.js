@@ -8,7 +8,7 @@ import Footer from "./components/shared/footer";
 
 function App() {
   return (
-    <div className="relative min-h-screen">
+    <div className="relative min-h-screen dark:bg-gray900">
         <Navbar />
         <div className="pb-64">
             <Routes>
