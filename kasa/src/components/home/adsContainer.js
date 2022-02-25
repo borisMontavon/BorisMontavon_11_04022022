@@ -1,7 +1,15 @@
 import Miniatures from "./miniatures";
 import {getMiniaturesData} from "../helpers/dataHelper";
+import { dataFetchHelper } from "../helpers/dataFecthHelper";
+import { useEffect } from "react";
 
 function AdsContainer() {
+    useEffect(() => {
+        const data = dataFetchHelper();
+
+        console.log(data);
+    }, []);
+
     const data = getMiniaturesData();
     const miniaturesItems = data.map((item, index) =>
         <Miniatures src={item.src} title={item.title} key={index}/>
