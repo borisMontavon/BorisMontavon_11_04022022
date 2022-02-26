@@ -1,17 +1,30 @@
 import Banner from "../shared/banner";
 import AdsContainer from "./adsContainer";
 import bannerImage from "../../assets/images/scotland.webp";
-import Resources from "../../assets/resources.json";
+import { dataFetchHelper } from "../helpers/dataFetchHelper";
+import { useState, useEffect } from "react";
+
 
 function Home() {
-    const { homeBanner } = Resources;
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        async function fetchData() {
+            const { homeBanner } = await dataFetchHelper();
+
+            setData(homeBanner);
+        };
+
+        fetchData();
+    }, []);
+
     return (
         <>
             <Banner
                 src={bannerImage}
                 alt="Test"
                 heightClass="h-28 lg:h-56"
-                title={homeBanner.title}
+                title={data.title}
             />
             <AdsContainer />
         </>

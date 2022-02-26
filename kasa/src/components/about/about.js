@@ -1,11 +1,23 @@
 import Banner from "../shared/banner";
 import Dropdown from "../shared/dropdown";
 import bannerImage from "../../assets/images/ireland.webp";
-import Resources from "../../assets/resources.json";
+import { dataFetchHelper } from "../helpers/dataFetchHelper";
+import { useState, useEffect } from "react";
 
 function About() {
-    const { dropdowns } = Resources;
-    const dropdownItems = dropdowns.map((item, index) => 
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        async function fetchData() {
+            const { dropdowns } = await dataFetchHelper();
+
+            setData(dropdowns);
+        };
+
+        fetchData();
+    }, []);
+
+    const dropdownItems = data.map((item, index) => 
         <Dropdown title={item.title} text={item.text} key={index} />
     );
 

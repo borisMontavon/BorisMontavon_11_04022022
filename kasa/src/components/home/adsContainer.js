@@ -1,18 +1,22 @@
 import Miniatures from "./miniatures";
-import {getMiniaturesData} from "../helpers/dataHelper";
-import { dataFetchHelper } from "../helpers/dataFecthHelper";
-import { useEffect } from "react";
+import { dataFetchHelper } from "../helpers/dataFetchHelper";
+import { useState, useEffect } from "react";
 
 function AdsContainer() {
-    useEffect(() => {
-        const data = dataFetchHelper();
+    const [data, setData] = useState([]);
 
-        console.log(data);
+    useEffect(() => {
+        async function fetchData() {
+            const { housing } = await dataFetchHelper();
+
+            setData(housing);
+        };
+
+        fetchData();
     }, []);
 
-    const data = getMiniaturesData();
     const miniaturesItems = data.map((item, index) =>
-        <Miniatures src={item.src} title={item.title} key={index}/>
+        <Miniatures src={item.cover} title={item.title} key={index}/>
     );
 
     return (
