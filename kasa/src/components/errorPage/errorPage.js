@@ -1,6 +1,6 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { dataFetchHelper } from "../helpers/dataFetchHelper";
-import { useState, useEffect } from "react";
 
 function ErrorPage() {
     const [data, setData] = useState([]);

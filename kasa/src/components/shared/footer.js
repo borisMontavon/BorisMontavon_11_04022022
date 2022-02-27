@@ -1,7 +1,7 @@
+import { useState, useEffect } from "react";
+import { dataFetchHelper } from "../helpers/dataFetchHelper";
 import logo from "../../assets/logo/LOGO-white.svg";
 import ThemeSwitch from "./darkModeSwitch";
-import { dataFetchHelper } from "../helpers/dataFetchHelper";
-import { useState, useEffect } from "react";
 
 function Footer() {
     const [data, setData] = useState([]);

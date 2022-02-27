@@ -1,8 +1,8 @@
+import { useState, useEffect } from "react";
+import { dataFetchHelper } from "../helpers/dataFetchHelper";
 import Banner from "../shared/banner";
 import Dropdown from "../shared/dropdown";
 import bannerImage from "../../assets/images/ireland.webp";
-import { dataFetchHelper } from "../helpers/dataFetchHelper";
-import { useState, useEffect } from "react";
 
 function About() {
     const [data, setData] = useState([]);
@@ -28,7 +28,9 @@ function About() {
                 alt="Test"
                 heightClass="h-56"
             />
-            {dropdownItems}
+            <div className="mx-6 lg:mx-52">
+                {dropdownItems}
+            </div>
         </>
     );
 }

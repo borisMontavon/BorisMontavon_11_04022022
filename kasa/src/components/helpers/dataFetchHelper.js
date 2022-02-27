@@ -1,7 +1,7 @@
 export async function dataFetchHelper() {
     try {
         let response = await fetch(
-            "assets/resources.json",
+            "/assets/resources.json",
             {
                 headers: 
                 {

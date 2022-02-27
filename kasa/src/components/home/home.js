@@ -1,9 +1,8 @@
+import { useState, useEffect } from "react";
+import { dataFetchHelper } from "../helpers/dataFetchHelper";
 import Banner from "../shared/banner";
 import AdsContainer from "./adsContainer";
 import bannerImage from "../../assets/images/scotland.webp";
-import { dataFetchHelper } from "../helpers/dataFetchHelper";
-import { useState, useEffect } from "react";
-
 
 function Home() {
     const [data, setData] = useState([]);

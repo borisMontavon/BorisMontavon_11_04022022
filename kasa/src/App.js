@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import "./css/compiled/compiled.css";
 import Home from "./components/home/home";
 import About from "./components/about/about";
+import HousingPage from "./components/housingPage/housingPage";
 import ErrorPage from "./components/errorPage/errorPage";
 import Navbar from "./components/shared/navbar";
 import Footer from "./components/shared/footer";
@@ -14,6 +15,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
+                <Route path="/housing/:id" element={<HousingPage />} />
                 <Route path="*" element={<ErrorPage />} />
             </Routes>
         </div>

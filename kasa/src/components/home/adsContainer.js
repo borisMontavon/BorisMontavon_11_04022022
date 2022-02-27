@@ -1,6 +1,6 @@
-import Miniatures from "./miniatures";
-import { dataFetchHelper } from "../helpers/dataFetchHelper";
 import { useState, useEffect } from "react";
+import { dataFetchHelper } from "../helpers/dataFetchHelper";
+import Miniatures from "./miniatures";
 
 function AdsContainer() {
     const [data, setData] = useState([]);
@@ -16,7 +16,7 @@ function AdsContainer() {
     }, []);
 
     const miniaturesItems = data.map((item, index) =>
-        <Miniatures src={item.cover} title={item.title} key={index}/>
+        <Miniatures src={item.cover} title={item.title} link={item.id} key={index} />
     );
 
     return (
