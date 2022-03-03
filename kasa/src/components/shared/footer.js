@@ -1,9 +1,20 @@
+import { useState, useEffect } from "react";
+import { dataFetchHelper } from "../helpers/dataFetchHelper";
 import logo from "../../assets/logo/LOGO-white.svg";
-import Resources from "../../assets/resources.json";
 import ThemeSwitch from "./darkModeSwitch";
 
 function Footer() {
-    const { footer } = Resources;
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        async function fetchData() {
+            const { footer } = await dataFetchHelper();
+
+            setData(footer);
+        };
+
+        fetchData();
+    }, []);
 
     return (
         <footer className="w-full h-52 absolute bottom-0 bg-black flex flex-col justify-center items-center">
@@ -13,7 +24,7 @@ function Footer() {
                 id="footer-logo"
             />
             <p className="text-white font-medium text-sm lg:text-xl mt-8">
-                {footer.title}
+                {data.title}
             </p>
             <ThemeSwitch />
         </footer>

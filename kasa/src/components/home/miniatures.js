@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 
 function Miniatures(props) {
-    const { src, title } = props;
+    const { src, title, link } = props;
 
     return (
         <div className="relative">
-            <Link to="/" className="miniature">
+            <Link to={`/housing/${link}`} className="miniature">
                 <img
                     src={src}
                     alt={title}
