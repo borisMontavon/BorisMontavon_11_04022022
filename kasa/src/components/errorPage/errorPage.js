@@ -7,9 +7,9 @@ function ErrorPage() {
 
     useEffect(() => {
         async function fetchData() {
-            const { housing } = await dataFetchHelper();
+            const { errorPage } = await dataFetchHelper();
 
-            setData(housing);
+            setData(errorPage);
         };
 
         fetchData();
