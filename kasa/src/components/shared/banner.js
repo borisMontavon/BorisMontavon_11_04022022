@@ -1,6 +1,5 @@
-function Banner(props) {
+function Banner({ src, alt, heightClass, title }) {
     const styles = {"objectFit": "cover", "objectPosition": "center"};
-    const { src, alt, heightClass, title } = props;
 
     return (
         <div className="w-full px-6 mb-6 pt-0 lg:my-10 lg:px-24 relative">
