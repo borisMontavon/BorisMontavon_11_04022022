@@ -3,9 +3,7 @@ import _ from "lodash";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
-function Dropdown(props) {
-    const { title, text, list } = props;
-
+function Dropdown({ title, text, list }) {
     // State hooks that allow the use of "State" in a functionnal component
     const [containerClass, setContainerClass] = useState("mb-4 lg:mb-8");
     const [iconClass, setIconClass] = useState("");

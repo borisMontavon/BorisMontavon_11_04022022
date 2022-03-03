@@ -1,9 +1,8 @@
 import { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import CarouselArrows from "./carouselArrows";
 
-function Carousel(props) {
-    const { pictures, title } = props;
+function Carousel({ pictures, title }) {
     const styles = {"objectFit": "cover", "objectPosition": "center"};
     const [imgSource, setImgSource] = useState("");
     const [imgIndex, setImgIndex] = useState(0);
@@ -47,24 +46,20 @@ function Carousel(props) {
 
     return (
         <div className="w-full h-64 lg:h-96 px-6 lg:px-24 mb-4 relative">
-            <span
-                onClick={onPreviousImg}
-                className="rounded-full absolute transition-all lg:hover:bg-primary left-8 lg:left-28 top-2/4 -translate-y-1/2 bg-primary-opac px-3.5 py-2 lg:px-4 lg:py-2.5 cursor-pointer lg:flex lg:items-center"
-            >
-                <FontAwesomeIcon icon={faChevronLeft} className="text-white lg:text-xl" />
-            </span>
+            { pictures.length > 1 ?
+                <CarouselArrows arrowsClass="left-8 lg:left-28" icon={faChevronLeft} callback={onPreviousImg} /> :
+                null
+            }
             <img
                 src={imgSource}
                 alt={title}
                 className="rounded-md lg:rounded-3xl h-full m-auto"
                 style={styles}
             />
-            <span
-                onClick={onNextImg}
-                className="rounded-full absolute transition-all lg:hover:bg-primary right-8 lg:right-28 top-2/4 -translate-y-1/2 bg-primary-opac px-3.5 py-2 lg:px-4 lg:py-2.5 cursor-pointer lg:flex lg:items-center"
-            >
-                <FontAwesomeIcon icon={faChevronRight} className="text-white lg:text-xl" />
-            </span>
+            { pictures.length > 1 ?
+                <CarouselArrows arrowsClass="right-8 lg:right-28" icon={faChevronRight} callback={onNextImg} /> :
+                null
+            }
             <span className="bg-primary-opac text-white text-sm lg:text-lg absolute bottom-2 left-2/4 -translate-x-1/2 px-2 py-1 rounded-md">
                 {`${imgIndex + 1}/${pictures.length}`}
             </span>

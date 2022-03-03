@@ -1,9 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 
-function OwnerRatings(props) {
-    const { rating, host } = props;
-
+function OwnerRatings({ rating, host }) {
     let stars = [];
 
     for (let i = 1; i <= 5; i++) {

@@ -291,20 +291,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   top: 50%;
 }.right-8{
   right: 2rem;
+}.bottom-2{
+  bottom: 0.5rem;
+}.left-2\/4{
+  left: 50%;
 }.top-6{
   top: 1.5rem;
 }.right-6{
   right: 1.5rem;
 }.-top-4{
   top: -1rem;
-}.bottom-8{
-  bottom: 2rem;
-}.left-2\/4{
-  left: 50%;
-}.bottom-4{
-  bottom: 1rem;
-}.bottom-2{
-  bottom: 0.5rem;
 }.z-20{
   z-index: 20;
 }.z-10{
@@ -435,12 +431,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 }.px-3{
   padding-left: 0.75rem;
   padding-right: 0.75rem;
-}.py-1{
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
 }.px-2{
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+}.py-1{
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }.pb-64{
   padding-bottom: 16rem;
 }.pt-0{
@@ -563,8 +559,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: var(--gray-900);
 }.dark .dark\:bg-gray800{
   background-color: var(--gray-800);
-}.dark .dark\:text-gray700{
-  color: var(--gray-700);
 }.dark .dark\:text-gray600{
   color: var(--gray-600);
 }@media (min-width: 1024px){.lg\:left-28{
@@ -604,24 +598,22 @@ Ensure the default browser behavior of the `hidden` attribute.
     height: 14rem;
   }.lg\:h-80{
     height: 20rem;
+  }.lg\:h-96{
+    height: 24rem;
   }.lg\:h-full{
     height: 100%;
   }.lg\:h-16{
     height: 4rem;
   }.lg\:h-12{
     height: 3rem;
-  }.lg\:h-96{
-    height: 24rem;
+  }.lg\:w-full{
+    width: 100%;
+  }.lg\:w-9\/12{
+    width: 75%;
   }.lg\:w-16{
     width: 4rem;
   }.lg\:w-40{
     width: 10rem;
-  }.lg\:w-full{
-    width: 100%;
-  }.lg\:w-8\/12{
-    width: 66.666667%;
-  }.lg\:w-9\/12{
-    width: 75%;
   }.lg\:grid-cols-3{
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }.lg\:grid-cols-2{
@@ -643,36 +635,33 @@ Ensure the default browser behavior of the `hidden` attribute.
   }.lg\:px-24{
     padding-left: 6rem;
     padding-right: 6rem;
+  }.lg\:px-4{
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }.lg\:py-2\.5{
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+  }.lg\:py-2{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }.lg\:px-6{
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }.lg\:py-10{
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
-  }.lg\:px-4{
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }.lg\:py-4{
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }.lg\:py-2{
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-  }.lg\:py-2\.5{
-    padding-top: 0.625rem;
-    padding-bottom: 0.625rem;
-  }.lg\:pr-10{
-    padding-right: 2.5rem;
-  }.lg\:pr-16{
-    padding-right: 4rem;
-  }.lg\:pr-24{
-    padding-right: 6rem;
-  }.lg\:pl-0{
-    padding-left: 0px;
   }.lg\:pl-24{
     padding-left: 6rem;
   }.lg\:pr-0{
     padding-right: 0px;
+  }.lg\:pr-24{
+    padding-right: 6rem;
+  }.lg\:pl-0{
+    padding-left: 0px;
+  }.lg\:pr-10{
+    padding-right: 2.5rem;
+  }.lg\:pr-16{
+    padding-right: 4rem;
   }.lg\:text-center{
     text-align: center;
   }.lg\:text-5xl{
